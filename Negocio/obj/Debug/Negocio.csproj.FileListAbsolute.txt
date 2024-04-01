@@ -1,0 +1,18 @@
+C:\Users\User\Desktop\Cursos C#\3- Nivel 2 C#\Proyecto Final\Negocio\bin\Debug\Negocio.dll
+C:\Users\User\Desktop\Cursos C#\3- Nivel 2 C#\Proyecto Final\Negocio\bin\Debug\Negocio.pdb
+C:\Users\User\Desktop\Cursos C#\3- Nivel 2 C#\Proyecto Final\Negocio\bin\Debug\Dominio.dll
+C:\Users\User\Desktop\Cursos C#\3- Nivel 2 C#\Proyecto Final\Negocio\bin\Debug\Dominio.pdb
+C:\Users\User\Desktop\Cursos C#\3- Nivel 2 C#\Proyecto Final\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\Cursos C#\3- Nivel 2 C#\Proyecto Final\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Cursos C#\3- Nivel 2 C#\Proyecto Final\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Users\User\Desktop\Cursos C#\3- Nivel 2 C#\Proyecto Final\Negocio\obj\Debug\Negocio.dll
+C:\Users\User\Desktop\Cursos C#\3- Nivel 2 C#\Proyecto Final\Negocio\obj\Debug\Negocio.pdb
+C:\Users\User\Desktop\Autodidacta\4- Nivel 3 C#\Proyecto_Final\Negocio\obj\Debug\negocio.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\Autodidacta\4- Nivel 3 C#\Proyecto_Final\Negocio\obj\Debug\negocio.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Autodidacta\4- Nivel 3 C#\Proyecto_Final\Negocio\obj\Debug\Negocio.dll
+C:\Users\User\Desktop\Autodidacta\4- Nivel 3 C#\Proyecto_Final\Negocio\obj\Debug\Negocio.pdb
+C:\Users\User\Desktop\Autodidacta\4- Nivel 3 C#\Proyecto_Final\Negocio\bin\Debug\Negocio.dll
+C:\Users\User\Desktop\Autodidacta\4- Nivel 3 C#\Proyecto_Final\Negocio\bin\Debug\Negocio.pdb
+C:\Users\User\Desktop\Autodidacta\4- Nivel 3 C#\Proyecto_Final\Negocio\bin\Debug\Dominio.dll
+C:\Users\User\Desktop\Autodidacta\4- Nivel 3 C#\Proyecto_Final\Negocio\bin\Debug\Dominio.pdb
+C:\Users\User\Desktop\Autodidacta\4- Nivel 3 C#\Proyecto_Final\Negocio\obj\Debug\negocio.csproj.CopyComplete

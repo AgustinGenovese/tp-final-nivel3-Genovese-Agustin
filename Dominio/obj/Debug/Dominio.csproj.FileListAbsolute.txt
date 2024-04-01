@@ -1,0 +1,12 @@
+C:\Users\User\Desktop\Cursos C#\3- Nivel 2 C#\Proyecto Final\Dominio\bin\Debug\Dominio.dll
+C:\Users\User\Desktop\Cursos C#\3- Nivel 2 C#\Proyecto Final\Dominio\bin\Debug\Dominio.pdb
+C:\Users\User\Desktop\Cursos C#\3- Nivel 2 C#\Proyecto Final\Dominio\obj\Debug\Dominio.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\Cursos C#\3- Nivel 2 C#\Proyecto Final\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Cursos C#\3- Nivel 2 C#\Proyecto Final\Dominio\obj\Debug\Dominio.dll
+C:\Users\User\Desktop\Cursos C#\3- Nivel 2 C#\Proyecto Final\Dominio\obj\Debug\Dominio.pdb
+C:\Users\User\Desktop\Autodidacta\4- Nivel 3 C#\Proyecto_Final\Dominio\bin\Debug\Dominio.dll
+C:\Users\User\Desktop\Autodidacta\4- Nivel 3 C#\Proyecto_Final\Dominio\bin\Debug\Dominio.pdb
+C:\Users\User\Desktop\Autodidacta\4- Nivel 3 C#\Proyecto_Final\Dominio\obj\Debug\dominio.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\Autodidacta\4- Nivel 3 C#\Proyecto_Final\Dominio\obj\Debug\dominio.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Autodidacta\4- Nivel 3 C#\Proyecto_Final\Dominio\obj\Debug\Dominio.dll
+C:\Users\User\Desktop\Autodidacta\4- Nivel 3 C#\Proyecto_Final\Dominio\obj\Debug\Dominio.pdb

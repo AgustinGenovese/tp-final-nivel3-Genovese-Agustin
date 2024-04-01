@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gestor-web", "gestor-web\gestor-web.csproj", "{7692F5E2-81E6-4297-AF5C-6197812052CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dominio", "Dominio\dominio.csproj", "{2960EAFD-68F8-45A8-A717-4FB7330EF3DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "negocio", "Negocio\negocio.csproj", "{E645405B-8787-4905-BA24-4DB928D180F7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7692F5E2-81E6-4297-AF5C-6197812052CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7692F5E2-81E6-4297-AF5C-6197812052CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7692F5E2-81E6-4297-AF5C-6197812052CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7692F5E2-81E6-4297-AF5C-6197812052CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2960EAFD-68F8-45A8-A717-4FB7330EF3DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2960EAFD-68F8-45A8-A717-4FB7330EF3DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2960EAFD-68F8-45A8-A717-4FB7330EF3DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2960EAFD-68F8-45A8-A717-4FB7330EF3DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E645405B-8787-4905-BA24-4DB928D180F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E645405B-8787-4905-BA24-4DB928D180F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E645405B-8787-4905-BA24-4DB928D180F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E645405B-8787-4905-BA24-4DB928D180F7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9C36DFAB-FDEC-4008-BA4D-7BD646446525}
+	EndGlobalSection
+EndGlobal
