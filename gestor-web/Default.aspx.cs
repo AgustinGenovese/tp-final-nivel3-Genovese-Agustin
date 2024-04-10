@@ -1,5 +1,4 @@
 ﻿using dominio;
-using Dominio;
 using negocio;
 using Negocio;
 using System;

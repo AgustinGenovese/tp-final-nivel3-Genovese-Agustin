@@ -8,6 +8,8 @@ using dominio;
 using Negocio;
 using System.Xml.Linq;
 using static System.Net.Mime.MediaTypeNames;
+using System.Configuration;
+
 
 namespace negocio
 {
@@ -92,7 +94,7 @@ namespace negocio
 
             try
             {
-                conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_WEB_DB; integrated security=true";
+                conexion.ConnectionString = ConfigurationManager.AppSettings["cadenaConexion"];
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.CommandText = "Select A.Id, A.Codigo, A.Nombre, A.Descripcion, A.ImagenUrl, A.Precio, A.IdMarca, A.IdCategoria, C.Descripcion AS CategoriaDescripcion, M.Descripcion AS MarcaDescripcion From ARTICULOS A, CATEGORIAS C, MARCAS M Where A.IdMarca = M.Id And A.IdCategoria = C.Id ";
                 comando.CommandText += " and A.Id = " +  id;

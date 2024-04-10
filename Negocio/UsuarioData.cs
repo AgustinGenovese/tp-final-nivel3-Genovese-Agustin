@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using dominio;
-using Dominio;
 using Microsoft.Win32;
 
 namespace Negocio
@@ -82,7 +82,7 @@ namespace Negocio
 
             try
             {
-                conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_WEB_DB; integrated security=true";
+                conexion.ConnectionString = ConfigurationManager.AppSettings["cadenaConexion"];
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.CommandText = "select id, email, pass, nombre, apellido, urlImagenPerfil, admin from USERS where ";
                 comando.CommandText += "Id = " + id;

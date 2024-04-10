@@ -60,6 +60,10 @@ namespace gestor_web
                          
                         txtCodigo.ReadOnly = true;
                     }
+                    else
+                    {
+                        TxtPrecio.Text = "0";
+                    }
                 }
             }
             catch (Exception ex)
@@ -105,7 +109,7 @@ namespace gestor_web
                     data.agregarConSP(nuevo);
                 }
 
-                Response.Redirect("Default.aspx", false);
+                Response.Redirect("ListaArticulos.aspx", false);
 
             }
             catch (Exception ex)
@@ -128,7 +132,7 @@ namespace gestor_web
                 {
                     ArticulosData data = new ArticulosData();
                     data.eliminar(int.Parse(Request.QueryString["Id"]));
-                    Response.Redirect("Default.aspx");
+                    Response.Redirect("ListaArticulos.aspx", false);
                 }
             }
             catch (Exception ex)

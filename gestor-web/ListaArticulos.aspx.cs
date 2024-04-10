@@ -15,6 +15,13 @@ namespace gestor_web
         public bool FiltroAvanzado { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                ddlCriterio.Items.Add("Contiene");
+                ddlCriterio.Items.Add("Comienza con");
+                ddlCriterio.Items.Add("Termina con"); ;
+            }
+
             if (!Seguridad.esAdmin(Session["usuario"]))
             {
                 Session.Add("error", "No tienes permisos para ingresar a esta pantalla");

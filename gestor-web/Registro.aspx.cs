@@ -1,4 +1,4 @@
-﻿using Dominio;
+﻿using dominio;
 using negocio;
 using Negocio;
 using System;
@@ -50,9 +50,8 @@ namespace gestor_web
         }
 
         protected void btnVolver_Click(object sender, EventArgs e)
-        {
+        {   
             Response.Redirect("Default.aspx", false);
         }
-
     }
 }

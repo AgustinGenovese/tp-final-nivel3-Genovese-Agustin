@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Security.Cryptography.X509Certificates;
+using System.Configuration;
 
 namespace Negocio
 {
@@ -20,17 +21,18 @@ namespace Negocio
             get { return lector; }
         }
 
+
         public AccesoDatos()
         // Constructor de la clase AccesoDatos
         {
-            conexion = new SqlConnection("server=.\\SQLEXPRESS; database=CATALOGO_WEB_DB; integrated security=true");
+            conexion = new SqlConnection(ConfigurationManager.AppSettings["cadenaConexion"]);
             comando = new SqlCommand();
         }
 
         public void setearConsulta(string consulta)
         // Establece la consulta SQL que se ejecutará y configura el tipo de comando como texto
         {
-            comando.CommandType = System.Data.CommandType.Text; 
+            comando.CommandType = System.Data.CommandType.Text;
             comando.CommandText = consulta;
         }
 
@@ -99,8 +101,8 @@ namespace Negocio
         public void cerrarConexion()
         // Cierra el lector de datos si está abierto y cierra la conexión a la base de datos
         {
-            if (lector!= null)
-                    lector.Close();
+            if (lector != null)
+                lector.Close();
             conexion.Close();
         }
     }

@@ -32,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -45,6 +46,7 @@
     <Compile Include="ArticulosData.cs" />
     <Compile Include="CategoriaData.cs" />
     <Compile Include="EnvioEmail.cs" />
+    <Compile Include="FavoritosData.cs" />
     <Compile Include="MarcaData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Seguridad.cs" />
@@ -55,6 +57,10 @@
       <Project>{2960eafd-68f8-45a8-a717-4fb7330ef3dd}</Project>
       <Name>dominio</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="script_db\CATALOGO_WEB_DB.sql" />
+    <Content Include="script_db\PROCEDURES.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

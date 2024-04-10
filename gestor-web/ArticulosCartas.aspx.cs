@@ -8,6 +8,7 @@ using System.Web.UI.WebControls;
 using dominio;
 using System.Net.NetworkInformation;
 using System.Collections;
+using Negocio;
 
 namespace gestor_web
 {
@@ -20,11 +21,6 @@ namespace gestor_web
 
         public List<Articulo> listaFavoritos { get; set; }
 
-        public ArticulosCartas()
-        {
-            listaFavoritos = new List<Articulo>();
-        }
-
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -35,6 +31,10 @@ namespace gestor_web
                 repRepetidor.DataSource = ListaArticulo;
                 repRepetidor.DataBind();
 
+                ddlCriterio.Items.Add("Contiene");
+                ddlCriterio.Items.Add("Comienza con");
+                ddlCriterio.Items.Add("Termina con"); ;
+
                 Favoritos = false;
             }
         }
@@ -42,32 +42,97 @@ namespace gestor_web
         protected void btnEjemplo_Click(object sender, EventArgs e)
         {
             string valor = ((Button)sender).CommandArgument;
+            int valorEntero = int.Parse(valor);
 
-            ArticulosData data = new ArticulosData();
-            Articulo articuloFavorito = data.listarPorId(valor);
-            List<Articulo> listaFavoritosSinRepetir = new List<Articulo>();
+            Favorito nuevo = new Favorito();
+            nuevo.IdArticulo = valorEntero;
+            Usuario usuario = (Usuario)Session["usuario"];
+            nuevo.idUser = usuario.Id;
 
+            FavoritosData negocioFavorito = new FavoritosData();
+            negocioFavorito.AgregarFavorito(nuevo);
+            List<Favorito> listaFavoritos = negocioFavorito.listarConSP();
 
-            if (Session["listaFavoritos"] == null)
+            ArticulosData negocio = new ArticulosData();
+            ListaArticulo = negocio.listarConSP();
+
+            if (listaFavoritos.Count != 0)
             {
-                listaFavoritos.Add(articuloFavorito);
-                Session["listaFavoritos"] = listaFavoritos;
-                listaFavoritosSinRepetir = listaFavoritos;
+                List<Articulo> favoritosFiltrados = new List<Articulo>();
+
+                favoritosFiltrados = ListaArticulo
+                    .Where(articulo =>
+                        listaFavoritos.Any(favorito =>
+                            articulo.Id == favorito.IdArticulo &&
+                            favorito.idUser == usuario.Id))
+                    .ToList();
+
+                string cantidadArticulosUnicos = Convert.ToString(favoritosFiltrados.Count);
+                lblMensaje.Text = cantidadArticulosUnicos;
             }
-            else
+        }
+
+        protected void btnFavoritos_Click(object sender, EventArgs e)
+        {
+
+            FavoritosData negocioFavorito = new FavoritosData();
+            List<Favorito> listaFavoritos = negocioFavorito.listarConSP();
+
+            ArticulosData negocio = new ArticulosData();
+            ListaArticulo = negocio.listarConSP();
+
+            List<Articulo> favoritosFiltrados = new List<Articulo>();
+
+            Usuario usuario = (Usuario)Session["usuario"];
+
+            if (listaFavoritos.Count != 0)
             {
-                listaFavoritos = (List<Articulo>)Session["listaFavoritos"];
-                listaFavoritos.Add(articuloFavorito);
-                listaFavoritosSinRepetir = listaFavoritos.GroupBy(x => x.Id).Select(g => g.First()).ToList();
-                Session["listaFavoritos"] = listaFavoritosSinRepetir;
+                favoritosFiltrados = ListaArticulo
+                    .Where(articulo =>
+                        listaFavoritos.Any(favorito =>
+                            articulo.Id == favorito.IdArticulo &&
+                            favorito.idUser == usuario.Id))
+                    .ToList();
+
+                repRepetidorFavoritos.DataSource = favoritosFiltrados;
+                repRepetidorFavoritos.DataBind();
+
+                string cantidadArticulosUnicos = Convert.ToString(favoritosFiltrados.Count);
+                lblMensaje.Text = cantidadArticulosUnicos;
             }
 
-            repRepetidorFavoritos.DataSource = listaFavoritosSinRepetir;
+            Favoritos = Session["Favoritos"] != null ? (bool)Session["Favoritos"] : true;
+            Session["favoritos"] = !Favoritos;
+        }
+
+        protected void btnEliminarFav_Click(object sender, EventArgs e)
+        {
+            int valor = int.Parse(((Button)sender).CommandArgument);
+
+            FavoritosData negocioFavoritos = new FavoritosData();
+            negocioFavoritos.eliminar(valor);
+            List<Favorito> listaFavoritos = negocioFavoritos.listarConSP();
+
+            ArticulosData negocio = new ArticulosData();
+            ListaArticulo = negocio.listarConSP();
+
+            List<Articulo> favoritosFiltrados = new List<Articulo>();
+
+            Usuario usuario = (Usuario)Session["usuario"];
+
+            favoritosFiltrados = ListaArticulo
+                    .Where(articulo =>
+                        listaFavoritos.Any(favorito =>
+                            articulo.Id == favorito.IdArticulo &&
+                            favorito.idUser == usuario.Id))
+                    .ToList();
+
+            repRepetidorFavoritos.DataSource = favoritosFiltrados;
             repRepetidorFavoritos.DataBind();
 
-            lblMensaje.Visible = true;
-            string cantidadArticulosUnicos = Convert.ToString(listaFavoritosSinRepetir.Count);
+            string cantidadArticulosUnicos = Convert.ToString(favoritosFiltrados.Count);
             lblMensaje.Text = cantidadArticulosUnicos;
+
         }
 
         protected void chkAvanzado_CheckedChanged1(object sender, EventArgs e)
@@ -120,41 +185,6 @@ namespace gestor_web
                 Session.Add("error", ex.ToString());
                 Response.Redirect("Error.aspx");
             }
-        }
-
-        protected void btnFavoritos_Click(object sender, EventArgs e)
-        {
-            if (Session["Favoritos"] != null)
-            {
-                Favoritos = (bool)Session["Favoritos"];
-                Session.Add("favoritos", !Favoritos);
-            }
-            else
-            {
-                Favoritos = true;
-                Session.Add("favoritos", !Favoritos);
-            }
-        }
-
-        protected void btnEliminarFav_Click(object sender, EventArgs e)
-        {
-            int valor = int.Parse(((Button)sender).CommandArgument);
-
-            List<Articulo> listaFavoritos = (List<Articulo>)Session["listaFavoritos"];
-
-            Articulo articuloAEliminar = listaFavoritos.FirstOrDefault(x => x.Id == valor);
-            if (articuloAEliminar != null)
-            {
-                listaFavoritos.Remove(articuloAEliminar);
-            }
-
-            Session["listaFavoritos"] = listaFavoritos;
-
-            repRepetidorFavoritos.DataSource = listaFavoritos;
-            repRepetidorFavoritos.DataBind();
-
-            lblMensaje.Visible = true;
-            lblMensaje.Text = listaFavoritos.Count.ToString();
         }
     }
 }

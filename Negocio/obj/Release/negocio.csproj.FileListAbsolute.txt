@@ -7,3 +7,21 @@ C:\Users\User\Desktop\Cursos C#\3- Nivel 2 C#\Proyecto Final\Negocio\obj\Release
 C:\Users\User\Desktop\Cursos C#\3- Nivel 2 C#\Proyecto Final\Negocio\obj\Release\negocio.csproj.CopyComplete
 C:\Users\User\Desktop\Cursos C#\3- Nivel 2 C#\Proyecto Final\Negocio\obj\Release\Negocio.dll
 C:\Users\User\Desktop\Cursos C#\3- Nivel 2 C#\Proyecto Final\Negocio\obj\Release\Negocio.pdb
+C:\Users\User\Desktop\Autodidacta\4- Nivel 3 C#\Proyecto\Negocio\obj\Release\negocio.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\Autodidacta\4- Nivel 3 C#\Proyecto\Negocio\obj\Release\negocio.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Autodidacta\4- Nivel 3 C#\Proyecto\Negocio\obj\Release\Negocio.dll
+C:\Users\User\Desktop\Autodidacta\4- Nivel 3 C#\Proyecto\Negocio\obj\Release\Negocio.pdb
+C:\Users\User\Desktop\Autodidacta\4- Nivel 3 C#\Proyecto\Negocio\bin\Release\Negocio.dll
+C:\Users\User\Desktop\Autodidacta\4- Nivel 3 C#\Proyecto\Negocio\bin\Release\Negocio.pdb
+C:\Users\User\Desktop\Autodidacta\4- Nivel 3 C#\Proyecto\Negocio\bin\Release\Dominio.dll
+C:\Users\User\Desktop\Autodidacta\4- Nivel 3 C#\Proyecto\Negocio\bin\Release\Dominio.pdb
+C:\Users\User\Desktop\Autodidacta\4- Nivel 3 C#\Proyecto\Negocio\obj\Release\negocio.csproj.CopyComplete
+C:\Users\User\Desktop\Proyecto\Negocio\bin\Release\Negocio.dll
+C:\Users\User\Desktop\Proyecto\Negocio\bin\Release\Negocio.pdb
+C:\Users\User\Desktop\Proyecto\Negocio\bin\Release\Dominio.dll
+C:\Users\User\Desktop\Proyecto\Negocio\bin\Release\Dominio.pdb
+C:\Users\User\Desktop\Proyecto\Negocio\obj\Release\negocio.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\Proyecto\Negocio\obj\Release\negocio.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Proyecto\Negocio\obj\Release\negocio.csproj.CopyComplete
+C:\Users\User\Desktop\Proyecto\Negocio\obj\Release\Negocio.dll
+C:\Users\User\Desktop\Proyecto\Negocio\obj\Release\Negocio.pdb
